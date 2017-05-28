@@ -6,12 +6,14 @@
    <div>
    <h1><a href="">Blog mój blog la la</a></h1>
    </div>
-
+   {% for post in posts %}
    <div>
-   <p>Dzisiaj jest 28 maja, ładna pogoda</p>
-   <h2><a href="">Zjadłam dzisiaj croissanta</a></h2>
-   <p>Był bardzo dobry. Z czekoladą.</p>
+   <p>published: {{ post.published_date }}</p>
+   <h1><a href="">{{ post.title }}</a></h1>
+   <p>{{ post.text|linebreaksbr }}</p>
    </div>
+   {% endfor %}
+
    </body>
 
 </html>
